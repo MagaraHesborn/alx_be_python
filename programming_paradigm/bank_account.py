@@ -10,7 +10,6 @@ class BankAccount:
     
     def withdraw(self, amount):
         if amount > self.__balance:
-            self.__balance = self.__balance  # No change to balance
             return False
         else:
             self.__balance -= amount
