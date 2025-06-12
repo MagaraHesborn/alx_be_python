@@ -3,10 +3,7 @@ class BankAccount:
         self.__balance = balance
 
     def deposit(self, amount):
-        if amount > 0:
             self.__balance += amount
-        else:
-            print("Enter a valid amount to deposit.")
     
     def withdraw(self, amount):
         if amount > self.__balance:
