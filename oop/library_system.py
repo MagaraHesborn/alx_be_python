@@ -1,8 +1,7 @@
 class Book:
-    def __init__(self, title: str, author: str, library):
+    def __init__(self, title: str, author: str):
         self.title: str = title
         self.author: str = author
-        self.library = library
 
     def __str__(self):
         return f"Book: {self.title} by {self.author}"
@@ -27,10 +26,11 @@ class Library:
     def __init__(self):
         self.books = [] 
     
-    def add_book(self, book):
+    def add_book(self, book: Book):
         self.book = book
         self.books.append(book)
 
     def list_books(self):
-        print(self.books)
+        for book in self.books:
+            print(book)
 
